@@ -3,7 +3,7 @@ use std::io::{BufRead, Write};
 const PORT: &str = "127.0.0.1:9998";
 
 
-fn do_server() -> Result<(), std::io::Error> {
+fn do_server() -> std::io::Result<()> {
     let listener = std::net::TcpListener::bind(PORT)?;
     println!("listening on http://{}", PORT);
 
